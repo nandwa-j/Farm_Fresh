@@ -1,4 +1,4 @@
-import {cart} from '../data/cart.js';
+import {cart, addProduceToCart} from '../data/cart.js';
 import {produces} from '../data/produces.js';
 
 let producesHTML = '';
@@ -56,24 +56,6 @@ produces.forEach((produce) => {
 
 document.querySelector('.js-produces-grid').innerHTML = producesHTML;
 
-export function addProduceToCart(produceId) {
-  let existingItem;
-
-  cart.forEach((cartProduct) => {
-    if (produceId === cartProduct.produceId) {
-      existingItem = cartProduct;
-    }
-  });
-
-  if (existingItem) {
-    existingItem.quantity += 1;
-  } else {
-    cart.push({
-      produceId: produceId,
-      quantity: 1,
-    });
-  }
-}
 
 function refreshCartCount() {
      let cartCount = 0;
