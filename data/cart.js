@@ -1,4 +1,10 @@
-export const cart = [];
+export const cart = [{
+     produceId: '7OUQWS8V',
+    quantity: 2,
+  }, {
+    produceId: 'L62HXTVJ',
+    quantity: 1
+}];
 
 export function addProduceToCart(produceId) {
   let existingItem;
