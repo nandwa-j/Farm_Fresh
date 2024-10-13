@@ -56,35 +56,43 @@ produces.forEach((produce) => {
 
 document.querySelector('.js-produces-grid').innerHTML = producesHTML;
 
+export function addProduceToCart(produceId) {
+  let existingItem;
+
+  cart.forEach((cartProduct) => {
+    if (produceId === cartProduct.produceId) {
+      existingItem = cartProduct;
+    }
+  });
+
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } else {
+    cart.push({
+      produceId: produceId,
+      quantity: 1,
+    });
+  }
+}
+
+function refreshCartCount() {
+     let cartCount = 0;
+
+      cart.forEach((cartItem) => {
+        cartCount += cartItem.quantity;
+      });
+
+      document.querySelector('.js-cart-quantity')
+        .innerHTML = cartCount;
+}
+
 document.querySelectorAll('.js-add-to-cart')
   .forEach((button) => {
     button.addEventListener('click', () => {
       const produceId = button.dataset.produceId;
+      addProduceToCart(produceId);
+      refreshCartCount();
 
-      let matchingItem;
-
-      cart.forEach((item) => {
-        if (produceId === item.produceId) {
-          matchingItem = item;
-        }
-      });
-
-      if (matchingItem) {
-        matchingItem.quantity += 1;
-      } else {
-        cart.push({
-          produceId: produceId,
-          quantity: 1
-        });
-      }
-
-      let cartQuantity = 0;
-
-      cart.forEach((item) => {
-        cartQuantity += item.quantity;
-      });
-
-      document.querySelector('.js-cart-quantity')
-        .innerHTML = cartQuantity;
+     
     });
   });
