@@ -39,7 +39,7 @@ cart.forEach((cartItem) => {
             <span class="update-quantity-link link-primary">
               Update
             </span>
-            <span class="delete-quantity-link link-primary js-delete-link" data-product-id="${sameProduce.id}">
+            <span class="delete-quantity-link link-primary js-delete-link" data-produce-id="${sameProduce.id}">
               Delete
             </span>
           </div>
@@ -100,6 +100,10 @@ document.querySelectorAll(".js-delete-link").forEach((link) => {
   link.addEventListener("click", () => {
     const produceId = link.dataset.produceId;
     removeItem(produceId);
+    const container = document.querySelector(
+        `.js-cart-item-container-${produceId}`
+        );
+        container.remove();
 
   });
 });
