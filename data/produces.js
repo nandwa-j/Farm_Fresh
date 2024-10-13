@@ -1,3 +1,15 @@
+export function getProduce(produceId) {
+  let existingProduce;
+
+  produces.forEach((produce) => {
+    if (produce.id === produceId) {
+      existingProduce = produce;
+    }
+  });
+
+  return existingProduce;
+}
+
 export const produces = [
   {
     id: "7OUQWS8V",
