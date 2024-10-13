@@ -2,54 +2,54 @@
   margin-top: 60px;
 }
 
-.products-grid {
+.produces-grid {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
 }
 
 @media (max-width: 2000px) {
-  .products-grid {
+  .produces-grid {
     grid-template-columns: repeat(7, 1fr);
   }
 }
 
 @media (max-width: 1600px) {
-  .products-grid {
+  .produces-grid {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 
 @media (max-width: 1300px) {
-  .products-grid {
+  .produces-grid {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 
 @media (max-width: 1000px) {
-  .products-grid {
+  .produces-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (max-width: 800px) {
-  .products-grid {
+  .produces-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 575px) {
-  .products-grid {
+  .produces-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 450px) {
-  .products-grid {
+  .produces-grid {
     grid-template-columns: 1fr;
   }
 }
 
-.product-container {
+.produce-container {
   padding-top: 40px;
   padding-bottom: 25px;
   padding-left: 25px;
@@ -62,7 +62,7 @@
   flex-direction: column;
 }
 
-.product-image-container {
+.produce-image-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,7 +71,7 @@
   margin-bottom: 20px;
 }
 
-.product-image {
+.produce-image {
   /* Images will overflow their container by default. To
     prevent this, we set max-width and max-height to 100%
     so they stay inside their container. */
@@ -79,38 +79,38 @@
   max-height: 100%;
 }
 
-.product-name {
+.produce-name {
   height: 40px;
   margin-bottom: 5px;
 }
 
-.product-rating-container {
+.produce-rating-container {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
 
-.product-rating-stars {
+.produce-rating-stars {
   width: 100px;
   margin-right: 6px;
 }
 
-.product-rating-count {
+.produce-rating-count {
   color: rgb(1, 124, 182);
   cursor: pointer;
   margin-top: 3px;
 }
 
-.product-price {
+.produce-price {
   font-weight: 700;
   margin-bottom: 10px;
 }
 
-.product-quantity-container {
+.produce-quantity-container {
   margin-bottom: 17px;
 }
 
-.product-spacer {
+.produce-spacer {
   flex: 1;
 }
 
