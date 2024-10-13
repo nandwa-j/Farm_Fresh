@@ -14,7 +14,7 @@ const produces = [
     image: "images/produces/english-cucumber.jpg",
     name: "English Cucumber",
     rating: {
-      stars: 5.0,
+      stars: 5,
       count: 189,
     },
     price: 10,
@@ -24,7 +24,7 @@ const produces = [
     image: "images/produces/mini-cucumber.jpg",
     name: "Mini Cucumber",
     rating: {
-      stars: 4.0,
+      stars: 4,
       count: 89,
     },
     price: 90,
@@ -44,7 +44,7 @@ const produces = [
     image: "images/produces/red-bell-peppers.jpg",
     name: "Red Bell Peppers",
     rating: {
-      stars: 4.0,
+      stars: 4,
       count: 67,
     },
     price: 50,
@@ -64,7 +64,7 @@ const produces = [
     image: "images/produces/round-cherry-tomatoes.jpg",
     name: "Round Cherry Tomatoes",
     rating: {
-      stars: 5.0,
+      stars: 5,
       count: 608,
     },
     price: 400,
