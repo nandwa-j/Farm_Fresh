@@ -1,4 +1,4 @@
-import { cart } from "../data/cart.js";
+import { cart, removeItem } from "../data/cart.js";
 import { produces } from "../data/produces.js";
 
 let cartSummaryHTML = "";
@@ -95,3 +95,11 @@ cart.forEach((cartItem) => {
 });
 
 document.querySelector(".js-order-summary").innerHTML = cartSummaryHTML;
+
+document.querySelectorAll(".js-delete-link").forEach((link) => {
+  link.addEventListener("click", () => {
+    const produceId = link.dataset.produceId;
+    removeItem(produceId);
+
+  });
+});
