@@ -1,4 +1,4 @@
-const produces = [
+export const produces = [
   {
     id: "7OUQWS8V",
     image: "images/produces/cabbages.jpg",
