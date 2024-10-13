@@ -22,17 +22,17 @@ cart.forEach((cartItem) => {
       </div>
 
       <div class="cart-item-details-grid">
-        <img class="product-image"
+        <img class="produce-image"
           src="${sameProduce.image}">
 
         <div class="cart-item-details">
-          <div class="product-name">
+          <div class="produce-name">
             ${sameProduce.name}
           </div>
-          <div class="product-price">
+          <div class="produce-price">
             kshs.${sameProduce.price}
           </div>
-          <div class="product-quantity">
+          <div class="produce-quantity">
             <span>
               Quantity: <span class="quantity-label">${cartItem.quantity}</span>
             </span>

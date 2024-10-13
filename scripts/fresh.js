@@ -22,21 +22,21 @@ produces.forEach((produce) => {
       </div>
 
       <div class="produce-price">
-        kshs.${produce.price} <!-- Corrected syntax here -->
+        kshs.${produce.price}
       </div>
 
       <div class="produce-quantity-container">
         <select>
-          <option selected value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
+          <option selected value="1">1kg</option>
+          <option value="2">2kg</option>
+          <option value="3">3kg</option>
+          <option value="4">4kg</option>
+          <option value="5">5kg</option>
+          <option value="6">6kg</option>
+          <option value="7">7kg</option>
+          <option value="8">8kg</option>
+          <option value="9">9kg</option>
+          <option value="10">10kg</option>
         </select>
       </div>
 
