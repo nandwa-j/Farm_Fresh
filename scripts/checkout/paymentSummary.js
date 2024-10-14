@@ -15,7 +15,7 @@ export function renderPaymentSummary() {
   });
 
   const beforeVat = producePrice + shippingPrice;
-  const vat = beforeVat * 0.1;
+  const vat = beforeVat * 0.16;
   const totals = beforeVat + vat;
 
   const paymentSummaryHTML = `

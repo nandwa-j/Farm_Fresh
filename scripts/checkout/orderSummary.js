@@ -40,10 +40,10 @@ export function renderOrderSummary() {
             <div class="produce-name">
               ${existingProduce.name}
             </div>
-            <div class="product-price">
+            <div class="produce-price">
               kshs.${existingProduce.price}
             </div>
-            <div class="product-quantity">
+            <div class="produce-quantity">
               <span>
                 Quantity: <span class="quantity-label">${cartProduce.quantity}</span>
               </span>
@@ -130,7 +130,7 @@ export function renderOrderSummary() {
   document.querySelectorAll('.js-delivery-option')
     .forEach((element) => {
       element.addEventListener('click', () => {
-        const {productId, deliveryOptionId} = element.dataset;
+        const {produceId, deliveryOptionId} = element.dataset;
         updateDeliveryOption(produceId, deliveryOptionId);
         renderOrderSummary();
         renderPaymentSummary();

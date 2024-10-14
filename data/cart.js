@@ -52,12 +52,12 @@ export function removeItem(produceId) {
   saveToStorage();
 }
 
-export function updateDeliveryOption(productId, deliveryOptionId) {
+export function updateDeliveryOption(produceId, deliveryOptionId) {
   let existingItem;
 
   cart.forEach((cartProduce) => {
-    if (productId === cartProduce.productId) {
-      matchingItem = cartProduce;
+    if (produceId === cartProduce.produceId) {
+      existingItem = cartProduce;
     }
   });
 
