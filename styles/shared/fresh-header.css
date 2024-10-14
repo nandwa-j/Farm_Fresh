@@ -25,7 +25,7 @@
   }
 }
 
-.amazon-header-middle-section {
+.fresh-header-middle-section {
   flex: 1;
   max-width: 850px;
   margin-left: 10px;
@@ -35,9 +35,9 @@
 
 .search-bar {
   flex: 1;
-  width: 300;
+  width: 200;
   font-size: 14px;
-  height: 40px;
+  height: 36px;
   padding-left: 15px;
   border: none;
   border-top-left-radius: 5px;
@@ -62,7 +62,7 @@
   margin-bottom: 5px;
 }
 
-.amazon-header-right-section {
+.fresh-header-right-section {
   width: 180px;
   flex-shrink: 0;
   display: flex;
@@ -92,11 +92,10 @@
 }
 
 .cart-icon {
-  width: 50px;
+  width: 60px;
 }
 
 .cart-text {
-  margin-top: 12px;
   font-size: 15px;
   font-weight: 700;
 }

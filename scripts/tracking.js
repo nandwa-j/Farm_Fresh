@@ -1,4 +1,3 @@
-// tracking.js
 async function fetchOrderTracking(orderId) {
     try {
         const response = await fetch(`/api/orders/${orderId}`);
@@ -14,23 +13,18 @@ async function fetchOrderTracking(orderId) {
 }
 
 function populateOrderTracking(order) {
-    // Populate delivery date
     const deliveryDateElement = document.getElementById('delivery-date');
-    deliveryDateElement.textContent = `Arriving on ${order.deliveryDate}`;
+    deliveryDateElement.textContent = `Arriving on ${order.deliveryDate}`
 
-    // Populate produce info
     const produceInfoElement = document.getElementById('produce-info');
     produceInfoElement.textContent = order.produceName;
 
-    // Populate produce quantity
     const produceQuantityElement = document.getElementById('produce-quantity');
     produceQuantityElement.textContent = `Quantity: ${order.quantity}`;
 
-    // Populate produce image
     const produceImageElement = document.getElementById('produce-image');
     produceImageElement.src = order.image;
 
-    // Update progress bar
     updateProgress(order.status);
 }
 
@@ -59,6 +53,5 @@ function updateProgress(status) {
     }
 }
 
-// Fetch the order tracking details
-const orderId = '12345'; // This should be dynamically set based on user selection or context
+const orderId = '12345'; 
 fetchOrderTracking(orderId);
