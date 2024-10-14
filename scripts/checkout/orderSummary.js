@@ -127,6 +127,22 @@ export function renderOrderSummary() {
       });
     });
 
+    document.querySelectorAll('.js-update-link')
+    .forEach((link) => {
+      link.addEventListener('click', () => {
+        const produceId = link.dataset.produceId;
+        const newQuantity = prompt('Enter new quantity:');
+
+        if (newQuantity && !isNaN(newQuantity) && newQuantity > 0) {
+          updateQuantity(produceId, parseInt(newQuantity));
+          renderOrderSummary();
+          renderPaymentSummary();
+        } else {
+          alert('Invalid quantity entered.');
+        }
+      });
+    });
+
   document.querySelectorAll('.js-delivery-option')
     .forEach((element) => {
       element.addEventListener('click', () => {
@@ -136,4 +152,12 @@ export function renderOrderSummary() {
         renderPaymentSummary();
       });
     });
+}
+    function updateQuantity(produceId, newQuantity) {
+  cart.forEach((cartProduce) => {
+    if (cartProduce.produceId === produceId) {
+      cartProduce.quantity = newQuantity;
+    }
+  });
+  saveToStorage(); // Ensure you save the cart back to localStorage
 }
