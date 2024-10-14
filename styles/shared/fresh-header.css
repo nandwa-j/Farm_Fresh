@@ -16,46 +16,12 @@
 }
 
 .fresh-header-left-section {
-  width: 175px;
+  width: 10px;
 }
 
 @media (max-width: 800px) {
   .fresh-header-left-section {
     width: unset;
-  }
-}
-
-.header-link {
-  display: inline-block;
-  padding: 5px;
-  border-radius: 3px;
-  cursor: cross-browser;
-  text-decoration: none;
-  border: 1px solid rgba(0, 0, 0, 0);
-}
-
-.header-link:hover {
-  border: 1px solid white;
-}
-
-.amazon-logo {
-  width: 100px;
-  margin-top: 5px;
-}
-
-.amazon-mobile-logo {
-  display: none;
-}
-
-@media (max-width: 575px) {
-  .amazon-logo {
-    display: none;
-  }
-
-  .amazon-mobile-logo {
-    display: block;
-    height: 35px;
-    margin-top: 5px;
   }
 }
 
@@ -69,9 +35,9 @@
 
 .search-bar {
   flex: 1;
-  width: 0;
-  font-size: 16px;
-  height: 38px;
+  width: 300;
+  font-size: 14px;
+  height: 40px;
   padding-left: 15px;
   border: none;
   border-top-left-radius: 5px;
@@ -84,7 +50,7 @@
   background-color: rgb(254, 189, 105);
   border: none;
   width: 45px;
-  height: 40px;
+  height: 38px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   flex-shrink: 0;
@@ -93,7 +59,7 @@
 .search-icon {
   height: 22px;
   margin-left: 2px;
-  margin-top: 3px;
+  margin-bottom: 5px;
 }
 
 .amazon-header-right-section {
