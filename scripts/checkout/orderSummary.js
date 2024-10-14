@@ -1,5 +1,5 @@
 import {cart, removeItem, updateDeliveryOption} from '../../data/cart.js';
-import {produces, getProduce} from '../../data/products.js';
+import {produces, getProduce} from '../../data/produces.js';
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 import {deliveryOptions, getDeliveryOption} from '../../data/deliveryOptions.js';
 import {renderPaymentSummary} from './paymentSummary.js';
@@ -8,7 +8,7 @@ export function renderOrderSummary() {
   let cartSummaryHTML = '';
 
   cart.forEach((cartProduce) => {
-    const productId = cartProduce.produceId;
+    const produceId = cartProduce.produceId;
 
     const existingProduce = getProduce(produceId);
 
