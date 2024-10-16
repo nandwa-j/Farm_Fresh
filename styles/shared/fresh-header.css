@@ -16,7 +16,7 @@
 }
 
 .fresh-header-left-section {
-  width: 10px;
+  width: 180px;
 }
 
 @media (max-width: 800px) {
@@ -47,7 +47,7 @@
 }
 
 .search-button {
-  background-color: rgb(254, 189, 105);
+  background-color: rgb(73, 231, 25);
   border: none;
   width: 45px;
   height: 38px;
@@ -70,16 +70,17 @@
 }
 
 .orders-link {
-  color: white;
+  color: rgb(179, 44, 44);
 }
 
 .returns-text {
   display: block;
   font-size: 13px;
+  font-weight: 700;
   color: white;
 }
 
-.orders-text {
+.tracking-text {
   display: block;
   font-size: 15px;
   font-weight: 700;
