@@ -37,7 +37,7 @@
 Before you begin, ensure you have the following installed on your machine:
 
 - Python 3.x
-- MySQL Server
+- PostgreSQL
 - Node.js (for any frontend package management)
 - Git
 
@@ -49,79 +49,9 @@ cd Farm_Fresh
 Backend Setup
 Create a virtual environment (recommended):
 
-bash
-Copy code
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-Install Flak and required packages:
-
-bash
-Copy code
-pip install Flask Flask-SQLAlchemy mysqlclient
-Set up the MySQL database:
-
-Create a new database named farm_fresh_db in MySQL.
-Run the SQL scripts provided in the database folder to create the necessary tables.
-Run the Flask application:
-
-bash
-Copy code
-python app.py
-Frontend Setup
-Install dependencies (if any are used, e.g., via npm):
-
-bash
-Copy code
-npm install
-Open checkout.html, fresh.html, order.html, and tracking.html in your browser to view the application.
-
-Database Structure
-The following tables are part of the database schema:
-
-1. Produces Table
-id: INT, primary key
-name: VARCHAR(255)
-price: DECIMAL(10, 2)
-rating_stars: DECIMAL(3, 2)
-rating_count: INT
-image: VARCHAR(255)
-available_quantity: INT
-2. Cart Table
-id: INT, primary key
-user_id: INT, foreign key
-produce_id: INT, foreign key
-quantity: INT
-3. Orders Table
-id: INT, primary key
-user_id: INT, foreign key
-total_price: DECIMAL(10, 2)
-order_date: TIMESTAMP
-status: VARCHAR(50)
-4. Order Items Table
-id: INT, primary key
-order_id: INT, foreign key
-produce_id: INT, foreign key
-quantity: INT
-API Endpoints
-GET /api/produces: Retrieve a list of all available produce.
-POST /api/cart: Add items to the cart.
-GET /api/cart: Retrieve current cart items.
-POST /api/orders: Place a new order.
-GET /api/orders/:id: Get order details by ID.
-Usage
-Browse Produce: Navigate to fresh.html to view available products.
-Add to Cart: Select items and quantities, then click "Add to Cart".
-Checkout: Click on the cart icon to view your items and proceed to checkout.
-Order Tracking: Use the order tracking page to view the status of your orders.
-Contributing
-Contributions are welcome! If you have suggestions for improvements or want to report bugs, please open an issue or submit a pull request.
-
-Fork the repository.
-Create your feature branch (git checkout -b feature/YourFeature).
-Commit your changes (git commit -m 'Add some feature').
-Push to the branch (git push origin feature/YourFeature).
-Open a pull request.
-License
+installation - `cd backend`
+run `pip install -r requirements.txt`
+run `python3 manage.py runserver`
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 Contact Information
