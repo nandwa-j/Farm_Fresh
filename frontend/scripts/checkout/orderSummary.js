@@ -1,16 +1,24 @@
 import {cart, removeItem, updateDeliveryOption} from '../../data/cart.js';
-import {produces, getProduce} from '../../data/produces.js';
+import {produces, getProduce, fetchProduces} from '../../data/produces.js';
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 import {deliveryOptions, getDeliveryOption} from '../../data/deliveryOptions.js';
 import {renderPaymentSummary} from './paymentSummary.js';
 
-export function renderOrderSummary() {
+export async function renderOrderSummary() {
+  await fetchProduces();
+  
   let cartSummaryHTML = '';
 
   cart.forEach((cartProduce) => {
     const produceId = cartProduce.produceId;
 
     const existingProduce = getProduce(produceId);
+    console.log(`Checking produceId: ${produceId}`, existingProduce);
+  
+    if (!existingProduce) {
+      console.error(`Produce not found for ID: ${produceId}`);
+      return; // Skip this iteration
+    }
 
     const deliveryOptionId = cartProduce.deliveryOptionId;
 

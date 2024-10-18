@@ -1,9 +1,9 @@
 .main {
-  max-width: 850px;
-  margin-top: 90px;
-  margin-bottom: 100px;
-  padding-left: 20px;
-  padding-right: 20px;
+  max-width: 900px;
+  margin-top: 80px;
+  margin-bottom: 90px;
+  padding-left: 18px;
+  padding-right: 18px;
 
  
   margin-left: auto;
@@ -11,15 +11,15 @@
 }
 
 .page-title {
-  font-weight: 700;
-  font-size: 26px;
-  margin-bottom: 25px;
+  font-weight: 750;
+  font-size: 25px;
+  margin-bottom: 24px;
 }
 
 .order-grid {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 50px;
+  row-gap: 55px;
 }
 
 .order-header {
@@ -30,9 +30,9 @@
   align-items: center;
   justify-content: space-between;
 
-  padding: 20px 25px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  padding: 18px 20px;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 10px;
 }
 
 .order-header-left-section {
