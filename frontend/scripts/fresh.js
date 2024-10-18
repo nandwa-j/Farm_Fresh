@@ -1,13 +1,11 @@
 import { cart, addProduceToCart } from '../data/cart.js';
 import { fetchProduces, produces } from '../data/produces.js';
 
-// Function to render produces
 async function renderProduces() {
-    await fetchProduces();  // Wait for the produces to be fetched
+    await fetchProduces();
 
     let producesHTML = '';
     
-    // Check if produces is not empty
     if (produces.length > 0) {
         produces.forEach((produce) => {
             producesHTML += `
