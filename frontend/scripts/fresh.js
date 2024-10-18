@@ -53,14 +53,12 @@ async function renderProduces() {
             });
         });
 
-        // Refresh the cart count
         refreshCartCount();
     } else {
         document.querySelector('.js-produces-grid').innerHTML = '<p>No produces available.</p>';
     }
 }
 
-// Function to refresh cart count
 function refreshCartCount() {
     let cartCount = 0;
     cart.forEach((cartItem) => {
@@ -69,5 +67,4 @@ function refreshCartCount() {
     document.querySelector('.js-cart-quantity').textContent = cartCount;
 }
 
-// Call renderProduces to fetch and display produces
 renderProduces();
